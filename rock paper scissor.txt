@@ -1,0 +1,45 @@
+import random
+a=1
+while a<4:
+  options = ("rock", "scissor", "paper")
+  computer_choice = random.choice(options)
+  n = input(
+      'type paper to choose paper, rock for rock, scissor for scissors\n')
+  u = 0
+  c = 0
+  if n == 'paper':
+    print("you chose : paper")
+    print(f"computer chose :{computer_choice}")
+  if n == 'rock':
+    print(f"you chose :rock")
+    print(f"computer chose:{computer_choice}")
+  if n == 'scissor':
+    print(f"you chose :scissor")
+    print(f"computer chose:{computer_choice}")
+  if computer_choice == n:
+    print('tie')
+
+  if computer_choice == 'scissor':
+    if n == "rock":
+      print('you won')
+      u=u+1
+    if n == "paper":
+      print('computer wins')
+      c=c+1
+  if computer_choice == 'rock':
+    if n == "paper":
+      print('you won')
+      u=u+1
+    if n == "scissor":
+      print('computer wins')
+      c=c+1
+  if computer_choice == 'paper':
+    if n == "scissor":
+      print('you won')
+      u=u+1
+    if n == "rock":
+      print('computer wins')
+      c=c+1
+  print(u, c)
+  print(a)
+  a=a+1
